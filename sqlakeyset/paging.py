@@ -104,7 +104,7 @@ def orm_placemarker_from_row(row, ocols, column_descriptions):
                 except ValueError:
                     continue
 
-        CANT_FIND = "can't find value for column {} in the results returned"
+        CANT_FIND = "can't find value for column {0} in the results returned"
         raise ValueError(CANT_FIND.format(ocol.full_name))
     return tuple(get_value(x) for x in ocols)
 

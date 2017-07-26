@@ -60,11 +60,11 @@ PER_PAGE = 3
 DB = 'postgresql:///taylor'
 
 def print_page(p):
-    print('\n\nPage for key: {}\n'.format(
+    print('\n\nPage for key: {0}\n'.format(
         p.paging.bookmark_current))
 
     for x in p:
-        print('{:>4d}  {}  {}'.format(x.peak_position, x.year, x.title))
+        print('{0:>4d}  {1}  {2}'.format(x.peak_position, x.year, x.title))
     print('\n')
 
 

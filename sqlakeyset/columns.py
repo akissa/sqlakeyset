@@ -8,7 +8,7 @@ from sqlalchemy import asc, column
 import sys
 from copy import copy
 
-PY2 = sys.version_info.major <= 2
+PY2 = sys.version_info[0] <= 2
 
 if not PY2:
     unicode = str
@@ -75,4 +75,4 @@ class OC(object):
         return str(self.uo)
 
     def __repr__(self):
-        return '<OC: {}>'.format(str(self))
+        return '<OC: {0}>'.format(str(self))

@@ -81,9 +81,10 @@ class Serial(object):
             c = TIME
         else:
             raise NotImplementedError(
-                "don't know how to serialize type of {} ({})".format(x, type(x)))
+                "don't know how to serialize type of {0} ({1})"
+                .format(x, type(x)))
 
-        return '{}:{}'.format(c, x)
+        return '{0}:{1}'.format(c, x)
 
     def unserialize_value(self, x):
         try:
@@ -116,6 +117,6 @@ class Serial(object):
         elif c == DATETIME:
             v = dateutil.parser.parse(v)
         else:
-            raise ValueError('unrecognized value {}'.format(x))
+            raise ValueError('unrecognized value {0}'.format(x))
 
         return v
