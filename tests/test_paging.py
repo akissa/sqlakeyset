@@ -1,11 +1,13 @@
 import warnings
 
-from sqlbag import temporary_database, S
-from sqlalchemy import select, String, Column, Integer, ForeignKey, column, table, desc
+from .utils import temporary_database, S
+from sqlalchemy import select, String, Column, Integer, ForeignKey, \
+    column, table, desc
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 
-from sqlakeyset import get_page, select_page, serialize_bookmark, unserialize_bookmark, OC, process_args
+from sqlakeyset import get_page, select_page, serialize_bookmark, \
+    unserialize_bookmark, OC, process_args
 
 from pytest import raises
 
