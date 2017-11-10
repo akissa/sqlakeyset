@@ -8,7 +8,7 @@ from sqlalchemy import asc, column
 import sys
 from copy import copy
 
-PY2 = sys.version_info.major <= 2
+PY2 = sys.version_info[0] <= 2
 
 if not PY2:
     unicode = str
