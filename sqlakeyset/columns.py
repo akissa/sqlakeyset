@@ -75,4 +75,4 @@ class OC(object):
         return str(self.uo)
 
     def __repr__(self):
-        return '<OC: {}>'.format(str(self))
+        return '<OC: {0}>'.format(str(self))

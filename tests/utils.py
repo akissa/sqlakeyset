@@ -315,7 +315,7 @@ def temporary_database(dialect='postgresql', do_not_delete=False):
 
     current_username = _current_username()
 
-    url = '{}://{}@/{}'.format(dialect, current_username, tempname)
+    url = '{0}://{1}@/{2}'.format(dialect, current_username, tempname)
 
     if url.startswith('mysql:'):
         url = url.replace('mysql:', 'mysql+pymysql:', 1)
@@ -351,7 +351,7 @@ def _killquery(dbtype, dbname, hardkill):
     where = ' and '.join(where)
 
     if where:
-        sql += ' and {}'.format(where)
+        sql += ' and {0}'.format(where)
     return sql
 
 

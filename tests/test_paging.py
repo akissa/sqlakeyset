@@ -47,7 +47,7 @@ def fixture_setup(dburl):
     with S(dburl) as s:
         for x in range(COUNT):
             b = Book(
-                name='Book {}'.format(x),
+                name='Book {0}'.format(x),
                 a=x,
                 b=x % 2,
                 c=COUNT - x,
